@@ -1,0 +1,20 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/pool/node_modules
+/pool/.pnp
+/pool/.pnp.js
+/src/firebase.js
+/server/node_modules
+
+
+# misc
+/pool/.DS_Store
+/pool/.env.local
+/pool/.env.development.local
+/pool/.env.test.local
+/pool/.env.production.local
+
+/pool/npm-debug.log*
+/pool/yarn-debug.log*
+/pool/yarn-error.log*

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 import './output.css';
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 import axios from 'axios';
 const Form = () => {
@@ -27,6 +27,9 @@ const Form = () => {
 
     const formQuery = async (event) => {
         console.log('form query activated');
+        console.log(request);
+        console.log(request['shape']);
+        console.log(request['features']);
         event.preventDefault();
         axios.post('http://localhost:8081/form',request)
         .then(res => {

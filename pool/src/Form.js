@@ -1,7 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import './App.css';
-import './output.css'
+import './output.css';
+import { Link, useNavigate } from "react-router-dom";
 
+import axios from 'axios';
 const Form = () => {
     const [request,setRequest] = useState(
         {
@@ -21,9 +23,17 @@ const Form = () => {
             sanitation_system: null
         }
     );
-    
-    const formQuery = () => {
-    console.log(request.shape, request.heater);
+    const navigate = useNavigate();
+
+    const formQuery = async (event) => {
+        console.log('form query activated');
+        event.preventDefault();
+        axios.post('http://localhost:8081/form',request)
+        .then(res => {
+            console.log(res['data']);
+            navigate('/');
+        })
+        .catch(err => console.log(err));
     }
 
     
@@ -122,7 +132,7 @@ const Form = () => {
                         </div>
 
                         <div class="mt-10 gap-x-6">
-                            <a href="#" onSubmit={(e) => formQuery} class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</a>
+                            <a href="#" onClick={(e) => formQuery(e)} class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</a>
                         </div>
                     </form>
             </div>

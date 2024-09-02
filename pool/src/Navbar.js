@@ -5,25 +5,25 @@ import {getAuth, signOut, onAuthStateChanged} from "firebase/auth";
 const Navbar= () =>{
   const auth = getAuth();
   const [loggedIn, setLoggedIn] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-    const hasRedirected = localStorage.getItem('redirected');
-    if (hasRedirected) {
-      setLoggedIn(true);
-    }
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const uid = user.uid;
-        console.log("User is signed in:", uid);
-        setLoggedIn(true);
-      } else {
-        console.log("User is signed out");
-        setLoggedIn(false);
-      }
-    });
-    return () => unsubscribe();
-  }, [auth, navigate]);
+  // useEffect(() => {
+  //   const hasRedirected = localStorage.getItem('redirected');
+  //   if (hasRedirected) {
+  //     setLoggedIn(true);
+  //   }
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       const uid = user.uid;
+  //       // console.log("User is signed in:", uid);
+  //       setLoggedIn(true);
+  //     } else {
+  //       // console.log("User is signed out");
+  //       setLoggedIn(false);
+  //     }
+  //   });
+  //   return () => unsubscribe();
+  // }, [auth, navigate]);
 
   const handleSignOut = async () => {
     try {

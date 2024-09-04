@@ -3,8 +3,11 @@
 @tailwind utilities;
 .App {
   text-align: center;
+  scroll-behavior: smooth;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .container{
   margin: auto;
   width: 60%;
@@ -17,6 +20,19 @@
   margin-top: 2%;
 }
 
+.footerFlex{
+  width: 60%;
+  margin: auto;
+}
+.footerLine{
+  width: 57%;
+  margin:auto;
+  margin-top: 5%;
+}
+.resultsTable{
+  width: 70%;
+  margin: auto;
+}
 /* .App-header {
   background-color: #282c34;
   min-height: 100vh;

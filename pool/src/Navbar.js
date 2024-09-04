@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import {getAuth, signOut, onAuthStateChanged} from "firebase/auth";
-
+import './App.css'
 const Navbar= () =>{
   const auth = getAuth();
   const [loggedIn, setLoggedIn] = useState(false);
@@ -66,9 +66,9 @@ const Navbar= () =>{
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <Link to="/" class="text-sm font-semibold leading-6 text-gray-900">Home</Link>
-        <Link to="/form" class="text-sm font-semibold leading-6 text-gray-900">Form</Link>
+        <a href="#form" class="text-sm font-semibold leading-6 text-gray-900">Form</a>
         <Link to="/" class="text-sm font-semibold leading-6 text-gray-900">About</Link>
-        <Link to="/" class="text-sm font-semibold leading-6 text-gray-900">Contact</Link>
+        <a href="#footer" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
       <Link to="/login" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></Link>
@@ -92,9 +92,9 @@ const Navbar= () =>{
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
             <Link to="/"class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</Link>
-            <Link to="/form" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Form</Link>
+            <a href="#form" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Form</a>
             <Link to="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</Link>
-            <Link to="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</Link>
+            <a href="#footer" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
             <div class="py-6">
             <Link to="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</Link>

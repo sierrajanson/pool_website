@@ -3,16 +3,12 @@ add price range
 add priority in relevance alg
 change pool size to 10 ft by 12 ft input instead of volume
 
-add authentication
-and paywell
-scrape for reviews potentially 
 
-make html for form output
-& opportunity to take form again
-save form options even??
 
-add about page
-add tbd contact page 
-fix footer
+add about page ?
+add login authentication ?
+add paywell ?
+ideal option ?
+
 
 mit license

@@ -67,7 +67,6 @@ const Navbar= () =>{
       <div class="hidden lg:flex lg:gap-x-12">
         <Link to="/" class="text-sm font-semibold leading-6 text-gray-900">Home</Link>
         <a href="#form" class="text-sm font-semibold leading-6 text-gray-900">Form</a>
-        <Link to="/" class="text-sm font-semibold leading-6 text-gray-900">About</Link>
         <a href="#footer" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -93,7 +92,6 @@ const Navbar= () =>{
             <div class="space-y-2 py-6">
             <Link to="/"class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Home</Link>
             <a href="#form" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Form</a>
-            <Link to="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</Link>
             <a href="#footer" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
             </div>
             <div class="py-6">

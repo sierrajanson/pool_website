@@ -3,10 +3,7 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  database: 'pools',
-  user: 'root',
-  password: ''
+
 })
 
 const app = express();
@@ -24,9 +21,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+
+// adjust SQL to use AND for pool type and sanitation 
 app.post('/form',(req,res) =>{
   const data = req.body;
-  let sql = `SELECT * FROM POOL_DATA WHERE pool_type="${data['shape']}" OR sanitation_system="${data['sanitation_system']}" OR fountains=${data['features']['fountains']} OR bubbles=${data['features']['bubbles']} OR lights=${data['features']['lights']} OR smart=${data['features']['is_smart']} OR heater=${data['features']['heater']} OR plants=${data['landscaping']['plants']} OR grill=${data['landscaping']['grill']}`;
+  let sql = `SELECT * FROM POOL_DATA WHERE shape="${data['shape']}" OR sanitation_system="${data['sanitation_system']}" OR fountains=${data['features']['fountains']} OR bubbles=${data['features']['bubbles']} OR lights=${data['features']['lights']} OR is_smart=${data['features']['is_smart']} OR heater=${data['features']['heater']} OR plants=${data['landscaping']['plants']} OR grill=${data['landscaping']['grill']}`;
  
   // huge array of results
   // need to order by relevance

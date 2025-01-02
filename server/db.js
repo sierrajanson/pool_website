@@ -3,7 +3,10 @@ const mysql = require('mysql');
 const cors = require('cors');
 
 const db = mysql.createConnection({
-
+  host: 'localhost',
+  database: 'pools',
+  user: 'root',
+  password: ''
 })
 
 const app = express();
@@ -20,7 +23,6 @@ const app = express();
 // pool_size=${data['size']}  --> adjust size to be inches
 app.use(cors());
 app.use(express.json());
-
 
 
 // adjust SQL to use AND for pool type and sanitation 

@@ -16,13 +16,13 @@ const Results = () => {
                     <table class="w-full mt-10 text-sm text-left rtl:text-right text-gray-400 dark:text-gray-300">
                         <thead class="text-xs text-indigo-700 uppercase bg-gray-50 dark:bg-indigo-700 dark:text-indigo-400">
                             <tr>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-5 py-3">
                                     Company
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-5 py-3">
                                     Pool Type
                                 </th>
-                                <th scope="col" class="px-6 py-3">
+                                <th scope="col" class="px-5 py-3">
                                     Sanitation
                                 </th>
                                 <th scope="col" class="px-6 py-3">

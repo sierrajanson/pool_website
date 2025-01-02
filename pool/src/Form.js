@@ -30,104 +30,173 @@ const Form = () => {
         }
     );
 
-    let results = [];
+    // let results = [];
+
+    let results = [{'company_id': 'BlueLagoon', 'shape': 'Lagoon', 'size': 22, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'None', 'price': 5623.56, 'issue_date': '31 August 2024'},        
+        {'company_id': 'BlueLagoon', 'shape': 'Oval', 'size': 43, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 9443.4, 'issue_date': '31 August 2024'},
+        {'company_id': 'BlueLagoon', 'shape': 'Circular', 'size': 50, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 7716.04, 'issue_date': '31 August 2024'},  
+        {'company_id': 'BlueLagoon', 'shape': 'Natural', 'size': 10, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 3302.6, 'issue_date': '31 August 2024'},   
+        {'company_id': 'BlueLagoon', 'shape': 'Rectangular', 'size': 34, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'None', 'price': 5776.41, 'issue_date': '31 August 2024'},   
+        {'company_id': 'BlueLagoon', 'shape': 'None', 'size': 12, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 1058.87, 'issue_date': '31 August 2024'},      
+        {'company_id': 'BlueLagoon', 'shape': 'Oval', 'size': 11, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'Chlorine', 'price': 8071.87, 'issue_date': '31 August 2024'},      
+        {'company_id': 'BlueLagoon', 'shape': 'Oval', 'size': 43, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 2805.18, 'issue_date': '31 August 2024'},     
+        {'company_id': 'LapizLazul', 'shape': 'Oval', 'size': 45, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 8138.37, 'issue_date': '31 August 2024'},
+        {'company_id': 'LapizLazul', 'shape': 'Geometric', 'size': 37, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'Chlorine', 'price': 10112.86, 'issue_date': '31 August 2024'},
+        {'company_id': 'LapizLazul', 'shape': 'Oval', 'size': 46, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 1, 'grill': 1, 'sanitation_system': 'None', 'price': 114.19, 'issue_date': '31 August 2024'},
+        {'company_id': 'LapizLazul', 'shape': 'Circular', 'size': 36, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 10016.54, 'issue_date': '31 August 2024'},       
+        {'company_id': 'LapizLazul', 'shape': 'Rectangular', 'size': 37, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 0, 'sanitation_system': 'UV', 'price': 9997.96, 'issue_date': '31 August 2024'},     
+        {'company_id': 'LapizLazul', 'shape': 'None', 'size': 35, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 1, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'UV', 'price': 1672.67, 'issue_date': '31 August 2024'},
+        {'company_id': 'LapizLazul', 'shape': 'Geometric', 'size': 42, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 835.01, 'issue_date': '31 August 2024'},  
+        {'company_id': 'LapizLazul', 'shape': 'L or T shaped', 'size': 42, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 8355.33, 'issue_date': '31 August 2024'},
+        {'company_id': 'LapizLazul', 'shape': 'Lagoon', 'size': 45, 'fountains': 0, 'bubbles': 0, 'lights': 0, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 8427.46, 'issue_date': '31 August 2024'},   
+        {'company_id': 'LapizLazul', 'shape': 'Oval', 'size': 29, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'None', 'price': 3201.53, 'issue_date': '31 August 2024'},
+        {'company_id': 'Blue Oasis', 'shape': 'L or T shaped', 'size': 11, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 2909.76, 'issue_date': '31 August 2024'},
+        {'company_id': 'Blue Oasis', 'shape': 'Geometric', 'size': 27, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 5430.82, 'issue_date': '31 August 2024'},
+        {'company_id': 'Blue Oasis', 'shape': 'Circular', 'size': 26, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 1, 'heater': 0, 'plants': 1, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 4375.42, 'issue_date': '31 August 2024'}, 
+        {'company_id': 'Blue Oasis', 'shape': 'Natural', 'size': 39, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'None', 'price': 980.59, 'issue_date': '31 August 2024'},        
+        {'company_id': 'Blue Oasis', 'shape': 'None', 'size': 40, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 8011.91, 'issue_date': '31 August 2024'},      
+        {'company_id': 'Blue Oasis', 'shape': 'Custom-shaped', 'size': 19, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 10033.51, 'issue_date': '31 August 2024'},
+        {'company_id': 'Blue Oasis', 'shape': 'Oval', 'size': 34, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 9759.58, 'issue_date': '31 August 2024'},
+        {'company_id': 'Blue Oasis', 'shape': 'Custom-shaped', 'size': 24, 'fountains': 0, 'bubbles': 0, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'UV', 'price': 1270.36, 'issue_date': '31 August 2024'},   
+        {'company_id': 'Blue Oasis', 'shape': 'Geometric', 'size': 28, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 9898.44, 'issue_date': '31 August 2024'},
+        {'company_id': 'Blue Oasis', 'shape': 'Rectangular', 'size': 49, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 1490.53, 'issue_date': '31 August 2024'},     
+        {'company_id': 'AquaPerfection', 'shape': 'Natural', 'size': 22, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 1, 'sanitation_system': 'None', 'price': 3200.03, 'issue_date': '31 August 2024'},       
+        {'company_id': 'AquaPerfection', 'shape': 'None', 'size': 43, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'None', 'price': 5781.17, 'issue_date': '31 August 2024'},
+        {'company_id': 'AquaPerfection', 'shape': 'None', 'size': 34, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'Chlorine', 'price': 8660.17, 'issue_date': '31 August 2024'},      
+        {'company_id': 'AquaPerfection', 'shape': 'Geometric', 'size': 48, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 1156.94, 'issue_date': '31 August 2024'},       
+        {'company_id': 'AquaPerfection', 'shape': 'Geometric', 'size': 20, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 0, 'sanitation_system': 'UV', 'price': 2781.49, 'issue_date': '31 August 2024'},       
+        {'company_id': 'AquaPerfection', 'shape': 'Circular', 'size': 14, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 1, 'sanitation_system': 'UV', 'price': 1311.47, 'issue_date': '31 August 2024'},        
+        {'company_id': 'AquaPerfection', 'shape': 'Lagoon', 'size': 31, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'UV', 'price': 2432.31, 'issue_date': '31 August 2024'},
+        {'company_id': 'AquaPerfection', 'shape': 'Oval', 'size': 33, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 0, 'sanitation_system': 'UV', 'price': 4473.6, 'issue_date': '31 August 2024'},
+        {'company_id': 'AquaPerfection', 'shape': 'Geometric', 'size': 23, 'fountains': 0, 'bubbles': 0, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'None', 'price': 8289.12, 'issue_date': '31 August 2024'},     
+        {'company_id': 'AquaPerfection', 'shape': 'L or T shaped', 'size': 19, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 5268.86, 'issue_date': '31 August 2024'},
+        {'company_id': 'PoolzForKidz', 'shape': 'Oval', 'size': 18, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 5915.09, 'issue_date': '31 August 2024'},      
+        {'company_id': 'PoolzForKidz', 'shape': 'Geometric', 'size': 29, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'None', 'price': 5568.04, 'issue_date': '31 August 2024'},     
+        {'company_id': 'PoolzForKidz', 'shape': 'Oval', 'size': 50, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'None', 'price': 8097.12, 'issue_date': '31 August 2024'},
+        {'company_id': 'PoolzForKidz', 'shape': 'Natural', 'size': 25, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 5600.17, 'issue_date': '31 August 2024'},   
+        {'company_id': 'PoolzForKidz', 'shape': 'None', 'size': 14, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'UV', 'price': 8853.51, 'issue_date': '31 August 2024'},
+        {'company_id': 'PoolzForKidz', 'shape': 'Rectangular', 'size': 16, 'fountains': 0, 'bubbles': 1, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 9635.91, 'issue_date': '31 August 2024'},
+        {'company_id': 'PoolzForKidz', 'shape': 'Circular', 'size': 33, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'UV', 'price': 5788.85, 'issue_date': '31 August 2024'},        
+        {'company_id': 'PoolzForKidz', 'shape': 'Rectangular', 'size': 47, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'UV', 'price': 5045.23, 'issue_date': '31 August 2024'},     
+        {'company_id': 'PoolzForKidz', 'shape': 'None', 'size': 13, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'UV', 'price': 2676.85, 'issue_date': '31 August 2024'},
+        {'company_id': 'PoolzForKidz', 'shape': 'Natural', 'size': 27, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 5975.78, 'issue_date': '31 August 2024'},  
+        {'company_id': 'Placer Pools', 'shape': 'Oval', 'size': 15, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 5526.42, 'issue_date': '31 August 2024'},     
+        {'company_id': 'Placer Pools', 'shape': 'L or T shaped', 'size': 28, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'Chlorine', 'price': 5968.01, 'issue_date': '31 August 2024'},
+        {'company_id': 'Placer Pools', 'shape': 'None', 'size': 36, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 1, 'grill': 0, 'sanitation_system': 'UV', 'price': 7604.58, 'issue_date': '31 August 2024'},
+        {'company_id': 'Placer Pools', 'shape': 'Oval', 'size': 15, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 5122.37, 'issue_date': '31 August 2024'},     
+        {'company_id': 'Placer Pools', 'shape': 'Custom-shaped', 'size': 33, 'fountains': 0, 'bubbles': 0, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 2735.44, 'issue_date': '31 August 2024'},
+        {'company_id': 'Placer Pools', 'shape': 'L or T shaped', 'size': 50, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 1, 'sanitation_system': 'Chlorine', 'price': 5854.83, 'issue_date': '31 August 2024'},
+        {'company_id': 'Placer Pools', 'shape': 'Lagoon', 'size': 50, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 5250.83, 'issue_date': '31 August 2024'},   
+        {'company_id': 'Placer Pools', 'shape': 'Rectangular', 'size': 38, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 9015.48, 'issue_date': '31 August 2024'},
+        {'company_id': 'Placer Pools', 'shape': 'Natural', 'size': 19, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 1389.04, 'issue_date': '31 August 2024'},
+        {'company_id': 'Placer Pools', 'shape': 'Geometric', 'size': 36, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 4259.03, 'issue_date': '31 August 2024'}, 
+        {'company_id': 'Family Pools', 'shape': 'Rectangular', 'size': 11, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 1340.85, 'issue_date': '31 August 2024'},
+        {'company_id': 'Family Pools', 'shape': 'None', 'size': 48, 'fountains': 1, 'bubbles': 1, 'lights': 0, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 3364.18, 'issue_date': '31 August 2024'},      
+        {'company_id': 'Family Pools', 'shape': 'None', 'size': 26, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 949.88, 'issue_date': '31 August 2024'},       
+        {'company_id': 'Family Pools', 'shape': 'Oval', 'size': 34, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 1, 'grill': 1, 'sanitation_system': 'UV', 'price': 523.15, 'issue_date': '31 August 2024'},
+        {'company_id': 'Family Pools', 'shape': 'Circular', 'size': 19, 'fountains': 1, 'bubbles': 0, 'lights': 1, 'is_smart': 1, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 8090.72, 'issue_date': '31 August 2024'}, 
+        {'company_id': 'Family Pools', 'shape': 'Lagoon', 'size': 10, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 0, 'heater': 1, 'plants': 0, 'grill': 0, 'sanitation_system': 'None', 'price': 9498.58, 'issue_date': '31 August 2024'},        
+        {'company_id': 'Family Pools', 'shape': 'Oval', 'size': 50, 'fountains': 1, 'bubbles': 0, 'lights': 0, 'is_smart': 1, 'heater': 0, 'plants': 1, 'grill': 0, 'sanitation_system': 'Saltwater', 'price': 10460.03, 'issue_date': '31 August 2024'},    
+        {'company_id': 'Family Pools', 'shape': 'Lagoon', 'size': 34, 'fountains': 1, 'bubbles': 1, 'lights': 1, 'is_smart': 0, 'heater': 0, 'plants': 0, 'grill': 0, 'sanitation_system': 'Chlorine', 'price': 5666.93, 'issue_date': '31 August 2024'},    
+        {'company_id': 'Family Pools', 'shape': 'None', 'size': 42, 'fountains': 0, 'bubbles': 0, 'lights': 1, 'is_smart': 0, 'heater': 1, 'plants': 1, 'grill': 1, 'sanitation_system': 'Saltwater', 'price': 9021.48, 'issue_date': '31 August 2024'},     
+        {'company_id': 'Family Pools', 'shape': 'None', 'size': 40, 'fountains': 0, 'bubbles': 1, 'lights': 1, 'is_smart': 1, 'heater': 0, 'plants': 0, 'grill': 1, 'sanitation_system': 'UV', 'price': 3924.82, 'issue_date': '31 August 2024'},];
     const formQuery = async (event) => {
         
         event.preventDefault();
-        console.log('Querying...');
+        // console.log('Querying...');
         
-        axios.post('http://localhost:8081/form',request)
-        .then(res => {
-            console.log('new results');
-            // console.log(res['data']);
-            results = res['data'];
-            console.log(results);
+        // axios.post('http://localhost:8081/form',request)
+        // .then(res => {
+        //     console.log('new results');
+        //     console.log(res['data']);
+        //     results = res['data'];
+        //     console.log(results);
                    
             // .catch(err => console.log(err));
             // flatten request 
-            let flat_req = {}
-            const req_keys = Object.keys(request);
-            for (let z = 0; z < req_keys.length; z++){
-                if (req_keys[z] === "landscaping" || req_keys[z] === "features"){
-                    let mini_dict = request[req_keys[z]]
-                    let min_key = Object.keys(mini_dict);
-                    for (let y=0;y < min_key.length; y++){
-                        flat_req[min_key[y]] = mini_dict[min_key[y]]
+        let flat_req = {}
+        const req_keys = Object.keys(request);
+        for (let z = 0; z < req_keys.length; z++){
+            if (req_keys[z] === "landscaping" || req_keys[z] === "features"){
+                let mini_dict = request[req_keys[z]]
+                let min_key = Object.keys(mini_dict);
+                for (let y=0;y < min_key.length; y++){
+                    flat_req[min_key[y]] = mini_dict[min_key[y]]
+                }
+            } else {
+            flat_req[req_keys[z]] = request[req_keys[z]];
+            }
+        }
+
+        let flat_req_keys = Object.keys(flat_req).sort();
+        // console.log('flat keys:');
+        // console.log(flat_req_keys.length);
+        // create relevance ordereing
+        let relevance_dict = {}
+        let req_in = 0;
+        var count = 0;
+        for (let i = 0; i < results.length; i++){
+            let result = results[i];
+            let keys = Object.keys(results[i]).sort();
+                
+            for (let j = 0; j < keys.length; j++){
+                if (keys[j] != 'company_id' && keys[j] != 'issue_date' && keys[j] != 'price'){
+                    let val = result[keys[j]];
+
+                    if (result[keys[j]] === 1){
+                        // console.log(val,1);
+                        val = true; 
+                    } 
+                    if (result[keys[j]] === 0){
+                        val = false;
+                        // console.log(val,0);
                     }
-                } else {
-                flat_req[req_keys[z]] = request[req_keys[z]];
+                    if (val === flat_req[flat_req_keys[req_in]]){
+                        count +=1
+                    }
+                    req_in += 1
                 }
             }
-
-            let flat_req_keys = Object.keys(flat_req).sort();
-            console.log('flat keys:');
-            console.log(flat_req_keys.length);
-            // create relevance ordereing
-            let relevance_dict = {}
-            let req_in = 0;
-            var count = 0;
-            for (let i = 0; i < results.length; i++){
-                let result = results[i];
-                let keys = Object.keys(results[i]).sort();
-                    
-                for (let j = 0; j < keys.length; j++){
-                    if (keys[j] != 'company_id' && keys[j] != 'issue_date' && keys[j] != 'price'){
-                        let val = result[keys[j]];
-
-                        if (result[keys[j]] === 1){
-                            // console.log(val,1);
-                            val = true; 
-                        } 
-                        if (result[keys[j]] === 0){
-                            val = false;
-                            // console.log(val,0);
-                        }
-                        if (val === flat_req[flat_req_keys[req_in]]){
-                            count +=1
-                        }
-                        req_in += 1
-                    }
-                }
-                // add to dictionary here
-                if(!relevance_dict[`${count}`]){
-                    relevance_dict[`${count}`] = [];
-                }
-                relevance_dict[`${count}`].push(result);
-                count = 0;
-                req_in = 0;
+            // add to dictionary here
+            if(!relevance_dict[`${count}`]){
+                relevance_dict[`${count}`] = [];
             }
-            console.log('relevance dict here:')
-            console.log(relevance_dict);
-            // picking top few to display
-            let keys = Object.keys(relevance_dict).sort();
-            let max = 10;
-            let idx = 0;
+            relevance_dict[`${count}`].push(result);
+            count = 0;
+            req_in = 0;
+        }
+        // console.log('relevance dict here:')
+        // console.log(relevance_dict);
+        // picking top few to display
+        let keys = Object.keys(relevance_dict).sort();
+        let max = 10;
+        let idx = 0;
 
-            let output = [];
-            let otherOptions = [];
-            // iterating through each of the keys backwards
-            for (let i = keys.length-1; i >= 0; i--){
+        let output = [];
+        let otherOptions = [];
+        // iterating through each of the keys backwards
+        for (let i = keys.length-1; i >= 0; i--){
+            if (idx >= max) break;
+            let freq = keys[i];
+            let obj_list = relevance_dict[freq];
+
+            // iterating through each row stored in frequency bucket
+            for (let j = 0; j < obj_list.length;j++){
                 if (idx >= max) break;
-                let freq = keys[i];
-                let obj_list = relevance_dict[freq];
-
-                // iterating through each row stored in frequency bucket
-                for (let j = 0; j < obj_list.length;j++){
-                    if (idx >= max) break;
-                    if(relevance_dict[freq][j]["sanitation_system"] === request["sanitation_system"] && relevance_dict[freq][j]["shape"] === request["shape"] ){
-                        output.push(relevance_dict[freq][j]);
-                        idx+=1;
-                    } else{
-                        otherOptions.push(relevance_dict[freq][j]);
-                    }
+                if(relevance_dict[freq][j]["sanitation_system"] === request["sanitation_system"] && relevance_dict[freq][j]["shape"] === request["shape"] ){
+                    output.push(relevance_dict[freq][j]);
+                    idx+=1;
+                } else{
+                    otherOptions.push(relevance_dict[freq][j]);
                 }
             }
+        }
 
-            
-            setResults(quickSort(output));
-            setOther(quickSort(otherOptions).slice(0,10-idx));
-            setView(false);
-        });  
+        
+        setResults(quickSort(output));
+        setOther(quickSort(otherOptions).slice(0,10-idx));
+        setView(false);
+        // });  
     }
 
     const fetchResults = () => {
@@ -171,7 +240,7 @@ const Form = () => {
                     <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Tell Us About Your Dream Pool</h1>
                     <p class="mt-3 text-base leading-8 text-gray-600">Fill out the form below to help us provide you with an instant quote:</p>
                 </div>
-                    <form class="mt-6 mx-30 sm:col-span-3 formContainer">
+                    <form class="mt-60 mx-30 sm:col-span-3 formContainer">
 
                         <label for="poolshape" class="block text-sm font-medium leading-6 text-gray-900">Pool Shape</label>
                         <select 
@@ -275,6 +344,7 @@ const Form = () => {
 
                         <div class="mt-10 gap-x-6">
                             <a href="#" onClick={(e) => formQuery(e)} class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</a>
+
                         </div>
                     </form>
             </div>
@@ -360,6 +430,7 @@ const Form = () => {
                 {/* <h1 class="mt-2 text-right cursor-pointer">More Results <span aria-hidden="true">&#709;</span></h1> */}
                 <div class="mt-10">
                 <a onClick={(e) => setView(true)} class="cursor-pointer rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Take Form Again</a>
+                
                 </div>
             </div>
         </div>

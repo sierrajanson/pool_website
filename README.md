@@ -1,6 +1,6 @@
 # Welcome to the Pool Quote Providing website!
 
-Check out the website [here!]([url](https://staging.dqv5pz9qpz914.amplifyapp.com/))
+Check out the website [here!](https://staging.dqv5pz9qpz914.amplifyapp.com/)
 
 And or check out some visuals from the site:
 
